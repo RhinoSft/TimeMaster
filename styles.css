@@ -1,0 +1,108 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0f2027;
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #00f0ff;
+    animation: glow 2s infinite alternate;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: #76d7c4;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+    }
+    to {
+        text-shadow: 0 0 20px #76d7c4, 0 0 30px #76d7c4, 0 0 40px #76d7c4;
+    }
+}
+
+.task-input input[type="text"],
+.task-input input[type="time"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00f0ff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #76d7c4;
+}
+
+h2 {
+    color: #00f0ff;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 100px;
+    height: 2px;
+    background: #00f0ff;
+    display: block;
+    margin: 5px auto 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: rgba(0, 240, 255, 0.2);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #00f0ff, #76d7c4);
+    left: 0;
+    top: 0;
+}
+
+.task-input {
+    margin-bottom: 30px;
+}
+
+input, button {
+    outline: none;
+}
